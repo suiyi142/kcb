@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.test.kcb"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.test.kcb.activity.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.test.kcb.activity.RegisterActivity" />
+        <activity android:name="com.test.kcb.activity.MainActivity" />
+        <activity
+            android:name="com.test.kcb.activity.AddActivity"
+            android:label="@string/title_activity_add"
+            android:theme="@style/DialogTheme" >
+        </activity>
+
+        <receiver android:name="com.test.kcb.receiver.MyReceiver" >
+            <intent-filter>
+                <action android:name="SEND_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
